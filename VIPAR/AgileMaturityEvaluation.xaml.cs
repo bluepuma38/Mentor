@@ -6,19 +6,20 @@ using Microsoft.Office.Interop.Excel;
 using System.Windows.Documents;
 using System.Windows.Media;
 using Application = Microsoft.Office.Interop.Excel.Application;
+using System.IO;
 
 namespace VIPAR
 {
     /// <summary>
-    /// Interaction logic for TeamFormationControl.xaml
+    /// Interaction logic for AgileMaturityEvaluation.xaml
     /// </summary>
-    public partial class KickOffReport : System.Windows.Controls.UserControl
+    public partial class AgileMaturityEvaluation : System.Windows.Controls.UserControl
     {
         DateTime date;
         float POAverage = 0.0f;
         float SMAverage = 0.0f;
         string selectedDirectoryPath;
-        public KickOffReport()
+        public AgileMaturityEvaluation()
         {
             InitializeComponent();
         }
@@ -53,7 +54,7 @@ namespace VIPAR
             return hasError;
         }
 
-        private Application OpenNewExcelFile()
+        private Workbook CreateNewExcelFile()
         {
             using (var fbd = new FolderBrowserDialog())
             {
@@ -65,17 +66,44 @@ namespace VIPAR
             }
             Application app = new Application();
             app.Visible = false;
-            return app;
+            return app.Workbooks.Add(XlWBATemplate.xlWBATWorksheet);
 
         }
-        private void ExportClicked(object sender, RoutedEventArgs e)
+
+        private Workbook OpenExcelFile()
+        {
+            using (var openFileDialog = new OpenFileDialog())
+            {
+                DialogResult result = openFileDialog.ShowDialog();
+
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(openFileDialog.FileName))
+                    selectedDirectoryPath = openFileDialog.FileName;
+            }
+
+            Application app = new Application();
+            app.Visible = false;
+            return app.Workbooks.Open(selectedDirectoryPath);
+        }
+
+        private void LoadClicked(object sender, RoutedEventArgs e)
+        {
+            Workbook wb = OpenExcelFile();
+            Worksheet auditSummary = wb.Worksheets[1];
+            Worksheet projectInfo = wb.Worksheets[2];
+            Worksheet teamFormation = wb.Worksheets[3];
+
+            ProjectInfoControl.AuditorsNameTextBox.Text = projectInfo.Range["B1"].Value;
+            ProjectInfoControl.ProjectNameTextBox.Text = projectInfo.Range["B2"].Value;
+            ProjectInfoControl.ProgramNameTextBox.Text = projectInfo.Range["B3"].Value;
+
+            wb.Close();
+        }
+        private void SaveClicked(object sender, RoutedEventArgs e)
         {
             if (HasErrors())
                 return;
 
-            var app = OpenNewExcelFile();
-
-            Workbook wb = app.Workbooks.Add(XlWBATemplate.xlWBATWorksheet);
+            Workbook wb = CreateNewExcelFile();
             Worksheet ws = wb.Worksheets[1];
             ws.Name = "Team Formation";
             Worksheet ws2 = wb.Sheets.Add() as Worksheet;

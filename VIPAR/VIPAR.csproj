@@ -68,7 +68,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="KickOffReport.xaml">
+    <Page Include="AgileMaturityEvaluation.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -82,8 +82,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="KickOffReport.xaml.cs">
-      <DependentUpon>KickOffReport.xaml</DependentUpon>
+    <Compile Include="AgileMaturityEvaluation.xaml.cs">
+      <DependentUpon>AgileMaturityEvaluation.xaml</DependentUpon>
     </Compile>
     <Compile Include="TeamFormationControl.xaml.cs">
       <DependentUpon>TeamFormationControl.xaml</DependentUpon>

@@ -19,9 +19,9 @@ namespace VIPAR
         {
             switch((string)ReportType.SelectionBoxItem)
             {
-                case "Kick Off":
+                case "Agile Maturity Evaluation":
                     {
-                        KickOffReport win = new KickOffReport();
+                        AgileMaturityEvaluation win = new AgileMaturityEvaluation();
                         var host = new Window();
                         host.Height = 690;
                         host.Width = 810;

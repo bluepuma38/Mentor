@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="VIPAR.KickOffReport"
+﻿<UserControl x:Class="VIPAR.AgileMaturityEvaluation"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -32,8 +32,9 @@
             </TabItem>
         </TabControl>
         <Border Grid.Row="1"  BorderThickness="1" BorderBrush="#CDCDCD" Height="40">
-            <StackPanel Background="#EFEFEF">
-                <Button Content="Export" Height="25" Width="60" Margin="650,7,0,7" Click="ExportClicked"></Button>
+            <StackPanel Background="#EFEFEF" Orientation="Horizontal">
+                <Button Content="Load" Height="20" Width="60" Margin="650,7,0,7" Click="LoadClicked"></Button>
+                <Button Content="Save" Height="20" Width="60" Margin="10,7,0,7" Click="SaveClicked"></Button>
             </StackPanel>
         </Border>
     </Grid>
