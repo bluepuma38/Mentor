@@ -1,0 +1,22 @@
+﻿<Window x:Class="VIPAR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VIPAR"
+        mc:Ignorable="d"
+        Title="VIP Audit Reporter" Height="350" Width="400">
+    <StackPanel VerticalAlignment="Top">
+        <Image Source="Resources/gciologo_footer.png" Margin="10,10,10,20"></Image>
+        <TextBlock Grid.Row="0" Text="What type of report are you observing today?" HorizontalAlignment="Center"></TextBlock>
+        <ComboBox Grid.Row="1" Margin="10" Width="150" x:Name="ReportType" HorizontalAlignment="Center">
+            <ComboBoxItem>Agile Maturity Evaluation</ComboBoxItem>
+            <ComboBoxItem>Kick Off</ComboBoxItem>
+            <ComboBoxItem>Daily Standup</ComboBoxItem>
+            <ComboBoxItem>Sprint Planning</ComboBoxItem>
+            <ComboBoxItem>Sprint Review</ComboBoxItem>
+            <ComboBoxItem>Retrospective</ComboBoxItem>
+        </ComboBox>
+        <Button Grid.Row="2" Content="Start" Width="70" HorizontalAlignment="Center" Click="StartClicked"></Button>
+    </StackPanel>
+</Window>

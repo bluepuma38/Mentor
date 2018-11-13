@@ -1,0 +1,159 @@
+﻿<UserControl x:Class="VIPAR.TeamFormationControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VIPAR"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="700" Background="White">
+    
+    <UserControl.Resources>
+        <Style TargetType="RichTextBox" x:Key="RTB">
+            <Setter Property="Margin" Value="0,-5,0,10" />
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Width" Value="650"/>
+            <Setter Property="Height" Value="40"/>
+            <Style.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+    </UserControl.Resources>
+    
+    <ScrollViewer>
+        <Grid Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Margin="0,0,0,10" Text="Team Morale" x:Name="Question1"></TextBlock>
+            <ComboBox Grid.Row="0" Grid.Column="1" Margin="0,0,0,10" Width="450" HorizontalAlignment="Left" x:Name="Rating1">
+                <ComboBoxItem>4 - Team energetic, fully engaged and productive.</ComboBoxItem>
+                <ComboBoxItem>3 - Team happy, engaged, productive, and genuinely enjoy working together.</ComboBoxItem>
+                <ComboBoxItem>2 - Minor vestiges of blame, scapegoating, indifference, but actively working to improve.</ComboBoxItem>
+                <ComboBoxItem>1 - Blame, scapegoating, indifference and low morale.</ComboBoxItem>
+            </ComboBox>
+            <RichTextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource RTB}" x:Name="RichTextBox1"/>
+
+            <TextBlock Grid.Row="2" Grid.Column="0" Margin="0,0,0,10" Text="Team Collaboration" x:Name="Question2"></TextBlock>
+            <ComboBox Grid.Row="2" Grid.Column="1" Margin="0,0,0,10" Width="450" HorizontalAlignment="Left" x:Name="Rating2">
+                <ComboBoxItem>4 - Team believes in their skills, integrity, want to succeed, and is dependable.</ComboBoxItem>
+                <ComboBoxItem>3 - Teamwork fully following "Team Agreement".</ComboBoxItem>
+                <ComboBoxItem>2 - Team starting to follow tenants of the "Team Agreement".</ComboBoxItem>
+                <ComboBoxItem>1 - Non-existent.</ComboBoxItem>
+            </ComboBox>
+            <RichTextBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource RTB}" x:Name="RichTextBox2"/>
+
+            <TextBlock Grid.Row="4" Grid.Column="0" Margin="0,0,0,10" Text="Current Tuckman Stage" x:Name="Question3"></TextBlock>
+            <ComboBox Grid.Row="4" Grid.Column="1" Margin="0,0,0,10" Width="450" HorizontalAlignment="Left" x:Name="Rating3">
+                <ComboBoxItem>4 - Team is performing.</ComboBoxItem>
+                <ComboBoxItem>3 - Team is norming.</ComboBoxItem>
+                <ComboBoxItem>2 - Team is progressing from forming and storming.</ComboBoxItem>
+                <ComboBoxItem>1 - Team is stuck in forming or storming.</ComboBoxItem>
+            </ComboBox>
+            <RichTextBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource RTB}" x:Name="RichTextBox3"/>
+
+            <TextBlock Grid.Row="6" Grid.Column="0" Margin="0,0,0,10" Text="Scrum Master" x:Name="Question4"></TextBlock>
+            <ComboBox Grid.Row="6" Grid.Column="1" Margin="0,0,0,10" Width="450" HorizontalAlignment="Left" x:Name="Rating4">
+                <ComboBoxItem>4 - Supports one team full-time.</ComboBoxItem>
+                <ComboBoxItem>3 - Supports 1-2 teams full-time.</ComboBoxItem>
+                <ComboBoxItem>2 - Part-time support of 1 or more teams.</ComboBoxItem>
+                <ComboBoxItem>1 - No Scrum Master assigned.</ComboBoxItem>
+            </ComboBox>
+            <RichTextBox Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource RTB}" x:Name="RichTextBox4"/>
+
+            <TextBlock Grid.Row="8" Grid.Column="0" Margin="0,0,0,10" Text="Team Working Agreement" x:Name="Question5"></TextBlock>
+            <ComboBox Grid.Row="8" Grid.Column="1" Margin="0,0,0,10" Width="450" HorizontalAlignment="Left" x:Name="Rating5">
+                <ComboBoxItem>4 - Agreed to, published and team is optimizing based their shared experience.</ComboBoxItem>
+                <ComboBoxItem>3 - Agreed to, published and team is adhering to.</ComboBoxItem>
+                <ComboBoxItem>2 - Agreed to and published.</ComboBoxItem>
+                <ComboBoxItem>1 - Not working on.</ComboBoxItem>
+            </ComboBox>
+            <RichTextBox Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource RTB}" x:Name="RichTextBox5"/>
+
+            <TextBlock Grid.Row="10" Grid.Column="0" Margin="0,0,0,10" Text="Optimal Size" x:Name="Question6"></TextBlock>
+            <ComboBox Grid.Row="10" Grid.Column="1" Margin="0,0,0,10" Width="450" HorizontalAlignment="Left" x:Name="Rating6">
+                <ComboBoxItem>4 - 5 to 9.</ComboBoxItem>
+                <ComboBoxItem>3 - 10 to 11.</ComboBoxItem>
+                <ComboBoxItem>2 - 12.</ComboBoxItem>
+                <ComboBoxItem>1 - 13 or more.</ComboBoxItem>
+            </ComboBox>
+            <RichTextBox Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource RTB}" x:Name="RichTextBox6"/>
+
+            <TextBlock Grid.Row="12" Grid.Column="0" Margin="0,0,0,10" Text="Maturity/Dedication" x:Name="Question7"></TextBlock>
+            <ComboBox Grid.Row="12" Grid.Column="1" Margin="0,0,0,10" Width="450" HorizontalAlignment="Left" x:Name="Rating7">
+                <ComboBoxItem>4 - Team together more than 8 PI's.</ComboBoxItem>
+                <ComboBoxItem>3 - Team together 5-7 PI's.</ComboBoxItem>
+                <ComboBoxItem>2 - Team together 3 to 4 PI's.</ComboBoxItem>
+                <ComboBoxItem>1 - Team forms and disbands constantly.</ComboBoxItem>
+            </ComboBox>
+            <RichTextBox Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource RTB}" x:Name="RichTextBox7"/>
+
+            <TextBlock Grid.Row="14" Grid.Column="0" Margin="0,0,0,10" Text="Cross Functional" x:Name="Question8"></TextBlock>
+            <ComboBox Grid.Row="14" Grid.Column="1" Margin="0,0,0,10" Width="450" HorizontalAlignment="Left" x:Name="Rating8">
+                <ComboBoxItem>4 - Team develops, tests has dependencies on 0-1 other team.</ComboBoxItem>
+                <ComboBoxItem>3 - Team develops, tests and has dependencies on 1-2 other teams.</ComboBoxItem>
+                <ComboBoxItem>2 - Team develops, tests and has dependencies on 2-3 other teams.</ComboBoxItem>
+                <ComboBoxItem>1 - Team develops and hands-off testing to another team; has dependencies on several teams.</ComboBoxItem>
+            </ComboBox>
+            <RichTextBox Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource RTB}" x:Name="RichTextBox8"/>
+
+            <TextBlock Grid.Row="16" Grid.Column="0" Margin="0,0,0,10" Text="Self Organizing" x:Name="Question9"></TextBlock>
+            <ComboBox Grid.Row="16" Grid.Column="1" Margin="0,0,0,10" Width="450" HorizontalAlignment="Left" x:Name="Rating9">
+                <ComboBoxItem>4 - Team is full-time and self organized.</ComboBoxItem>
+                <ComboBoxItem>3 - Combination of full-time assigned and self organized team members.</ComboBoxItem>
+                <ComboBoxItem>2 - Assigned full-time team members.</ComboBoxItem>
+                <ComboBoxItem>1 - Assigned part-time team members.</ComboBoxItem>
+            </ComboBox>
+            <RichTextBox Grid.Row="17" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource RTB}" x:Name="RichTextBox9"/>
+
+            <TextBlock Grid.Row="18" Grid.Column="0" Margin="0,0,0,10" Text="Definition of Ready" x:Name="Question10"></TextBlock>
+            <ComboBox Grid.Row="18" Grid.Column="1" Margin="0,0,0,10" Width="450" HorizontalAlignment="Left" x:Name="Rating10">
+                <ComboBoxItem>4 - Comprehensive (DoR); periodically reviewed, updated and strictly followed.</ComboBoxItem>
+                <ComboBoxItem>3 - Comprehensive (DoR) which is published.</ComboBoxItem>
+                <ComboBoxItem>2 - Informal Definition of Ready (DoR).</ComboBoxItem>
+                <ComboBoxItem>1 - There is no "Definition of Ready".</ComboBoxItem>
+            </ComboBox>
+            <RichTextBox Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource RTB}" x:Name="RichTextBox10"/>
+
+            <TextBlock Grid.Row="20" Grid.Column="0" Margin="0,0,0,10" Text="Definition of Done" x:Name="Question11"></TextBlock>
+            <ComboBox Grid.Row="20" Grid.Column="1" Margin="0,0,0,10" Width="450" HorizontalAlignment="Left" x:Name="Rating11">
+                <ComboBoxItem>4 - Comprehensive (DoD); periodically reviewed, updated and strictly followed.</ComboBoxItem>
+                <ComboBoxItem>3 - Comprehensive (DoD) which is published.</ComboBoxItem>
+                <ComboBoxItem>2 - Informal Definition of Done (DoD).</ComboBoxItem>
+                <ComboBoxItem>1 - There is no "Definition of Done".</ComboBoxItem>
+            </ComboBox>
+            <RichTextBox Grid.Row="21" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource RTB}" x:Name="RichTextBox11"/>
+        </Grid>
+    </ScrollViewer>
+</UserControl>
