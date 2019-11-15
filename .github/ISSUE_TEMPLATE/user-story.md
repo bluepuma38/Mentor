@@ -23,6 +23,7 @@ assignees: ''
 **Definition of Done**
 - [ ] Documentation and Artifacts Attached
 - [ ] New Unit Tests Written & All Passing
+- [ ] Code Reviewed by at least 2 peers
 - [ ] Test Plans Updated
 - [ ] Test Automation Updated
 - [ ] Demonstrated in Sprint Review
