@@ -16,9 +16,9 @@ assignees: ''
 * Z
 
 **Tasks:** 
-- [ ] Task X - x hours
-- [ ] Task Y - x hours
-- [ ] Task Z - x hours
+- [ ] Task X - x hour(s)
+- [ ] Task Y - x hour(s)
+- [ ] Task Z - x hour(s)
 
 **Definition of Done**
 - [ ] Documentation and Artifacts Attached
