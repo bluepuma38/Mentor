@@ -15,10 +15,11 @@ assignees: ''
 * Y
 * Z
 
-**Tasks:** 
-- [ ] Task X - x hour(s)
-- [ ] Task Y - x hour(s)
-- [ ] Task Z - x hour(s)
+Tasks | Estimated Hour(s) | Remaining Hour(s)
+------------ | ------------- | -------------
+X | 0 | 0
+Y | 0 | 0
+Z | 0 | 0
 
 **Definition of Done**
 - [ ] Documentation and Artifacts Attached
